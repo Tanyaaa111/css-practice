@@ -1,0 +1,221 @@
+/* :root {
+  background: purple;
+}
+
+html {
+  max-width: 720px;
+
+  background: blue;
+}
+
+body {
+  background: #fff;
+}
+
+* {
+  color: red;
+}
+
+h1 {
+  color: green;
+}
+
+.box {
+  background: grey;
+}
+
+#user {
+  color: blue;
+}
+
+h1,
+h2,
+button {
+  color: green;
+}
+
+button.button {
+  background: red;
+  color: white;
+}
+div > p {
+  color: aqua;
+}
+
+div .child {
+  color: blueviolet;
+} */
+
+.card-dark {
+  background: rgb(192, 188, 188);
+}
+
+/* .item {
+  color: green;
+}
+.item:first-child {
+  color: blue;
+}
+.item:last-child {
+  color: blue;
+}
+.item:only-child {
+  color: blue;
+}
+.item:first-of-type {
+  color: rgb(206, 69, 142);
+}
+.item:last-of-type {
+  color: rgb(206, 69, 142);
+}
+.item:only-of-type {
+  color: rgb(5, 53, 11);
+}
+.item:nth-child(2) {
+  color: aqua;
+}
+.item:nth-child(2n + 1) {
+  color: rgb(23, 27, 27);
+}
+p:not(.item) {
+  color: chocolate;
+}
+.item:not(p) {
+  color: brown;
+}
+p:empty {
+  height: 10px;
+  background: red;
+} */
+
+.input-dark[required] {
+  background: rgb(238, 42, 42);
+}
+.input-dark {
+  background: rgb(40, 38, 38);
+}
+.input-dark[type='number'] {
+  background: rgb(78, 37, 118);
+}
+.small-img[alt~='small'] {
+  height: 500px;
+}
+a[rel~='external'] {
+  color: rgb(24, 165, 78);
+}
+
+button[class|='btn'] {
+  background: rgb(125, 104, 104);
+}
+a[class^='btn'] {
+  background: rgb(246, 3, 3);
+}
+a[class*='btn'] {
+  background: rgb(246, 3, 3);
+}
+a[class$='big'] {
+  background: rgb(2, 10, 243);
+}
+.btn::first-letter {
+  color: red;
+}
+.big-text::first-line {
+  color: blue;
+}
+.input-dark::plaseholder {
+  color: green;
+}
+.big-text::before,
+.big-text::after {
+  content: '$$$';
+  color: green;
+  background: red;
+}
+
+#test:target {
+  color: red;
+}
+
+.link:link {
+  color: red;
+}
+
+.link:hover {
+  color: green;
+}
+/* 
+.card:hover {
+  background: green;
+} */
+
+.link:active {
+  color: purple;
+}
+
+.card:active {
+  background: purple;
+}
+
+input {
+  background-color: gray;
+}
+
+input:focus {
+  background-color: red;
+}
+
+.card:focus-within {
+  background: red;
+}
+
+.card:lang(en) {
+  background: blue;
+}
+
+button {
+  background-color: aqua;
+}
+
+button:enabled {
+  background-color: rgb(214, 97, 107);
+}
+
+.inp:read-write {
+  background-color: blue;
+}
+
+.inp:read-only {
+  background-color: red;
+}
+
+input[type='checkbox']:checked ~ span {
+  background: red;
+}
+
+.valid:valid {
+  background: yellow;
+}
+
+.valid:invalid {
+  background: rgb(78, 78, 2);
+}
+
+.valid:optional {
+  background: green;
+}
+
+.number:focus {
+  background: gray;
+}
+
+.number:out-of-range {
+  background: red;
+}
+
+.number:in-range {
+  background: green;
+}
+
+input:placeholder-shown ~ span {
+  background: pink;
+}
