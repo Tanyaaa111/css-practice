@@ -1,3 +1,7 @@
+:root {
+  --text-color: #212529;
+  --space-medium: 24px;
+}
 .page {
   background: #ffffff;
   padding: 0 15px;
@@ -9,7 +13,7 @@
 }
 
 .header {
-  padding: 24px;
+  padding: var(--space-medium);
 
   border-bottom: 1px solid #dee2e6;
 }
@@ -36,7 +40,8 @@
 
 .nav_link:hover {
   text-decoration: underline;
-  color: blue;
+  opacity: 50%;
+  /* прозорість */
 }
 
 .nav_vertical > .nav_link {
@@ -44,7 +49,7 @@
 }
 
 .nav_inline > .nav_link:not(:last-child) {
-  margin-right: 24px;
+  margin-right: var(--space-medium);
 }
 
 .nav_vertical > .nav_link:not(:last-child) {
@@ -61,7 +66,7 @@
 }
 
 .footer {
-  padding: 24px 0;
+  padding: var(--space-medium) 0;
 
   border-top: 1px solid #dee2e6;
 }
@@ -76,7 +81,7 @@
 
 .footer_title {
   font-size: 20px;
-  color: #212529;
+  color: var(--text-color, #212529);
 
   display: block;
   margin-bottom: 12px;
@@ -84,14 +89,14 @@
 
 .hero_title {
   font-size: 56px;
-  color: #212529;
+  color: var(--text-color, #212529);
   font-weight: 500;
   margin-bottom: 12px;
   text-align: center;
 }
 
 .hero_text {
-  color: #212529;
+  color: var(--text-color, #212529);
   font-size: 20px;
   text-align: center;
   max-width: 585px;
@@ -99,23 +104,23 @@
 }
 
 .plans_card:not(:last-of-type) {
-  margin-right: 24px;
+  margin-right: var(--space-medium);
 }
 
 .card-header {
   padding: 12px;
   text-align: center;
-  font-size: 24px;
-  color: #212529;
+  font-size: var(--space-medium);
+  color: var(--text-color, #212529);
 }
 
 .card-body {
-  padding: 24px;
+  padding: var(--space-medium);
 }
 
 .card_price_amount {
   font-size: 40px;
-  color: #212529;
+  color: var(--text-color, #212529);
 }
 
 .card_price_duration {
@@ -126,17 +131,17 @@
 }
 
 .card_block {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-medium);
   text-align: center;
 }
 
 .card_block:not(:last-of-type) {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-medium);
 }
 
 .card_description_item {
   font-size: 16px;
-  color: #212529;
+  color: var(--text-color, #212529);
   display: block;
 }
 
@@ -154,6 +159,16 @@
 .card {
   border: 2px solid blue;
   box-shadow: 0px 0px 10px 10px red;
+}
+
+.card:hover {
+  outline: 2px solid blue;
+  outline-offset: 5px;
+
+  box-shadow: 5px 5px 10px 1px rgba(116, 169, 255, 0.254);
+
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .btn {
@@ -193,3 +208,78 @@ h1 {
   border-image-repeat: space;
   border-image-outset: 10px;
 }
+
+.card_block {
+  /* list-style-type: square; */
+  list-style-position: inside;
+
+  list-style-image: linear-gradient(
+    to bottom left,
+    blue,
+    red
+  );
+  padding: 0;
+}
+
+.card_description_item {
+  display: list-item;
+}
+
+/* .table tr {
+  border: 1px solid rgb(49, 45, 45);
+} */
+
+.table tr td {
+  border: 1px solid rgb(49, 45, 45);
+  border-bottom-color: red;
+  border-right-color: blue;
+}
+
+.table {
+  table-layout: fixed;
+  width: 600px;
+  /* border-collapse: separate; */
+  /* рамка окремо */
+  /* border-collapse: collapse; */
+  /* об'єднана рамка */
+  border-collapse: unset;
+  border-spacing: 20px 10px;
+  /* відстань між рамками */
+  caption-side: top;
+  /* положення заголовку */
+  empty-cells: hide;
+  /* сховати порожні комірки */
+}
+
+.nav_link::before {
+  content: open-quote;
+  /* лапки до контенту */
+  margin-right: 15px;
+}
+
+.nav_link::after {
+  content: close-quote;
+  /* лапки після контенту */
+  margin-left: 10px;
+}
+
+.nav_link::before,
+.nav_link::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+
+.calc {
+  width: 600px;
+
+  margin-top: 0;
+
+  margin-left: calc(50% - (600px / 2));
+  /* зробити по середині */
+  /* calc-функція яка виконує калькуляцію */
+}
+
+/* змінна var() використовується для того щоб замінити повторювані значення  */
