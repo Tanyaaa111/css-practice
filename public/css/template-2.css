@@ -16,6 +16,9 @@
   padding: var(--space-medium);
 
   border-bottom: 1px solid #dee2e6;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
@@ -69,6 +72,9 @@
   padding: var(--space-medium) 0;
 
   border-top: 1px solid #dee2e6;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer_copyright {
@@ -105,6 +111,12 @@
   border-radius: 24px;
   padding: 80px;
   color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
 }
 
 .button {
@@ -189,6 +201,9 @@
 	padding-bottom: 12px;
 	border-bottom: 1px solid #DEE2E6;
 	margin-bottom: 40px;
+
+	display: flex;
+	justify-content: space-between;
 }
 
 .category_button {
@@ -299,4 +314,82 @@ margin-bottom: 40px;
 
 .link_item:hover {
 	text-decoration: underline;
+}
+
+.flex_container {
+	display: flex;
+	/* гнучке позиціювання (альтернатива сітковій системі) */
+
+	flex-direction: row;
+	/* напрямок горизонтально зліва направо */
+	/* flex-direction: row-reverse;
+	напрямок справа наліво */
+	/* flex-direction: column; */
+	/* напрямок зверху вниз */
+	/* flex-direction: column-reverse;
+	напрямок знизу вверх */
+
+	flex-wrap:wrap;
+	/* перенесення контенту на новий рядок */
+
+	/* justify-content: flex-start; */
+	/* розміщення контенту по основній лінії на початку */
+	/* justify-content: flex-end;
+	розміщення контенту вкінці */
+	justify-content: center;
+	/* розміщення контенту посередині */
+	/* justify-content: space-between;
+	розміщення рівномірно по сторінці */
+	/* justify-content: space-around;
+	розміщення контенту рівномірно по сторінці з відступами по краях меншими ніж по середині в половину */
+	/* justify-content: space-evenly; */
+	/* розміщення контенту рівномірно з однаковими відступами як посередині так і по краях */
+	/* justify-content: stretch; */
+	/* розтягує елементи, щоб зайняти всю ширину */
+
+	align-content: space-between;
+	/* розміщення кентенту по другорядній лінії. Значення такі самі як і по основній. */
+	/* align-content: baseline;
+	елементи вирівнюються по лінії рядка тексту */
+
+	align-items: flex-start;
+	/* вирівнювання елементів по другій лінії */
+	gap: 24px;
+	/* проміжки між елементами */
+}
+
+.flex_item {
+	/* width: 50%; */
+
+	flex-basis: calc(50% - (24px / 2))
+	/* задання початкової довжини елементів вздовж головної лінії */
+	/* margin: 15px; */
+
+	/* flex-grow: 1; */
+	/* встановлення пропорційного збільшення довжини елементів по головній лінії */
+}
+
+.flex_item:first-of-type {
+	/* align-self: flex-end; */
+	/* height: 100px; */
+
+	/* flex-basis: calc(50% - 24px); */
+
+	flex-shrink: 0;
+	/* пропорційне зменшення довжини елементів по головній лінії */
+}
+
+.flex_item:nth-of-type(2) {
+	/* align-self: center; */
+	/* height: 300px; */
+}
+
+.flex_item:nth-of-type(3) {
+	/* align-self: center; */
+	/* height: 300px; */
+
+	/* flex-basis: calc(50% - 24px); */
+
+	order: 1;
+	/* порядок розміщення елементів */
 }
