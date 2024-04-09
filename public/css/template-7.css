@@ -267,6 +267,7 @@ body {
 .articles_list {
   display: flex;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .article_item {
@@ -274,7 +275,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
-  width: 360px;
 }
 
 .articles_photo > img {
@@ -318,6 +318,10 @@ body {
   font-size: 14px;
 }
 
+.articles_photo {
+  position: relative;
+}
+
 .article_badge {
   background: #fb5f5f;
   padding: 2px 6px;
@@ -326,7 +330,7 @@ body {
   width: 35px;
   height: 16px;
   border-radius: 4px;
-  position: relative;
+  position: absolute;
   right: 10px;
   bottom: 10px;
   display: flex;
